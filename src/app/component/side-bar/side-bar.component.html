@@ -1,0 +1,21 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav closed mode="side" class="sidenav" #sidenav>
+        <div class="sidenav-header">
+            <img src="../assets/Img/profile pic 2.png" alt="Profile Picture" class="student-profile-pic">
+            <div class="student-details">
+                <h2>Sanket Sutar</h2>
+                <p>SID: IT200157</p>
+                <p>Programme: BScIT</p>
+            </div>
+        </div>
+        <mat-nav-list>
+            <a mat-list-item *ngFor="let item of menuitem()" [routerLink]="item.route" routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive">
+                <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+                <span matListItemTitle>{{item.label}}</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

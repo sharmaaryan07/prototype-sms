@@ -1,0 +1,19 @@
+.toolbar{
+    position: relative;
+    z-index: 5;
+}
+/* @media (max-width: 500px) {
+    .Logout{
+        display: none;
+    }
+} */
+
+.Logo {
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.Spacer {
+    flex: 1 1 auto;
+}
